@@ -8,7 +8,7 @@ function Movies(props) {
     return(
         <div>
             < SearchForm />
-            < Preloader />
+            {/* < Preloader /> */}
             < MoviesCardList />
             < MoviesCard />
         </div>
