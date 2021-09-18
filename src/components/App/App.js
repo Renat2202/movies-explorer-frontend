@@ -53,7 +53,12 @@ function App() {
 
       </Switch>
 
-      < Footer />
+      <Switch>
+        < Route exact path={['/', '/movies', '/saved-movies']}>
+          < Footer />
+        </Route>
+      </Switch>
+      
     </div>
   );
 }
