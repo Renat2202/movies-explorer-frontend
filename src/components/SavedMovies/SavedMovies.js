@@ -8,7 +8,7 @@ function SavedMovies(props) {
         <div>
             < SearchForm />
             < MoviesCardList />
-            < MoviesCard />
+            {/* < MoviesCard /> */}
         </div>
     );
 }
