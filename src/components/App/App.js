@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import Main from '../Main/Main';
 import Movies from '../Movies/Movies';
 import Profile from '../Profile/Profile';
@@ -9,6 +9,7 @@ import Login from '../Login/Login';
 import './App.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import NotFound from '../NotFound/NotFound';
 
 function App() {
   const [isBurgerMenuOpen, setBurgerMenuOpen] = React.useState(false);
@@ -23,7 +24,11 @@ function App() {
 
   return (
     <div className="page">
-      < Header isBurgerMenuOpen={isBurgerMenuOpen} burgerMenuOpen={handleBurgerButtonClick} burgerMenuClose={handleBurgerCloseButtonClick} />
+      <Switch>
+        <Route exact path={['/', '/movies', '/saved-movies', '/profile']}>
+          < Header isBurgerMenuOpen={isBurgerMenuOpen} burgerMenuOpen={handleBurgerButtonClick} burgerMenuClose={handleBurgerCloseButtonClick} />
+        </Route>
+      </Switch>
 
       <Switch>
 
@@ -47,8 +52,16 @@ function App() {
           < Register />
         </Route>
 
-        <Route path='/signin'>
+        <Route  path='/signin'>
           < Login />
+        </Route>
+
+        <Route path='/not-found'>
+          < NotFound />
+        </Route>
+
+        <Route path='*'>
+          < Redirect to='/not-found'/>
         </Route>
 
       </Switch>
