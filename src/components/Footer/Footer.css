@@ -37,6 +37,11 @@
     column-gap: 20px;
     padding: 0;
     margin: 0;
+    transition: 0.4s;
+}
+
+.footer__link:hover {
+    opacity: 0.7;
 }
 
 .footer__links-item {

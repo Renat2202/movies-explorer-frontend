@@ -42,7 +42,7 @@
 
 .search-form__input {
     margin: 0 0 0 10px;
-    padding: 0;
+    padding: 4px;
     position: relative;
     flex-grow: 1;
     border: none;
@@ -52,6 +52,10 @@
     font-size: 18px;
     line-height: 20px;
     color: #A0A0A0;
+}
+
+.search-form__input:focus {
+    outline: 2px solid #3456F3;
 }
 
 .search-form__find-button {
@@ -84,6 +88,10 @@
     width: 1px;
     height: 40px;
     background-color: #CBCBCB;
+}
+
+.search-form__find-button:hover {
+    opacity: 0.8;
 }
 
 .search-form__radio-button {

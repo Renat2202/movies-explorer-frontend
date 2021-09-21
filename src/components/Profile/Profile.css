@@ -56,6 +56,10 @@
     background-color: transparent;
 }
 
+.profile__input:focus {
+    outline: 2px solid #3456F3;
+}
+
 .profile__submit-button {
     cursor: pointer;
     width: 410px;
