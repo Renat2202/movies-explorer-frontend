@@ -109,6 +109,10 @@
     color: #FFFFFF;
 }
 
+.login__submit-button_disabled {
+    opacity: 0.3;
+}
+
 .login__signin-label {
     display: flex;
     justify-content: center;

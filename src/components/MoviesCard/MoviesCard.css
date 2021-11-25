@@ -81,6 +81,12 @@
     border: none;
 }
 
+.movies-card__image {
+    width: 220px;
+    height: 122px;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 600px) {
     .movies-card {
         flex-direction: column-reverse;
@@ -107,5 +113,11 @@
 
     .movies-card__button-container {
         margin: 16px 16px 0 0;
+    }
+
+    .movies-card__image {
+        width: 100%;
+        height: 168px;
+        /* object-fit: contain; */
     }
 }

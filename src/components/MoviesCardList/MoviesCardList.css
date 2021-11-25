@@ -34,6 +34,10 @@
     opacity: 0.8;
 }
 
+.card-list__more-button_hidden {
+    display: none;
+}
+
 @media screen and (max-width: 800px) {
     .card-list {
         padding: 60px 30px 30px;
